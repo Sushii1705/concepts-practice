@@ -1,0 +1,38 @@
+<div class="pt-4">
+  <button routerLink="../add" class="btn btn-primary mb-3">+Add</button>
+  <button class="btn btn-info mb-3" (click)="displayoverlay()">filter</button>
+  <table class="table table-hover shadow">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">firstname</th>
+        <th scope="col">lastname</th>
+        <th scope="col">email</th>
+        <th scope="col">password</th>
+        <th scope="col">age</th>
+        <th scope="col">city</th>
+        <th scope="col " colspan="2">actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="align-middle" *ngFor="let item of mentorList">
+        <th>{{ item.id }}</th>
+        <td>{{ item.firstname }}</td>
+        <td>{{ item.lastname }}</td>
+        <td>{{ item.email }}</td>
+        <td>{{ item.password }}</td>
+        <td>{{ item.age }}</td>
+        <td>{{ item.city }}</td>
+        <td >
+             <button class="btn btn-info" (click)="edit(item.id)">edit</button>
+             
+            </td>
+            <td>
+            <button class="btn btn-danger" (click)="onDelete(item.id)">
+              delete
+            </button>
+          </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

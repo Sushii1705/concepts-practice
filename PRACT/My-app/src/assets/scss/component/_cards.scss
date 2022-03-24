@@ -1,0 +1,47 @@
+// Card styles goes here
+.card-wrapper {
+    grid-template-columns: repeat(5, minmax(0, 2fr));
+    grid-gap             : $card-gap;
+}
+
+.card {
+    padding         : $card-padding-y $card-padding-x;
+    background-color: $card-bg;
+    border-radius   : $card-border-radius;
+    transition      : $transition-timing all;
+
+    &:hover {
+        background-color: $card-hover-bg;
+
+        .card-icon,
+        .card-text,
+        .card-text-sm {
+            color: $white;
+        }
+    }
+
+    &-body {
+        display       : flex;
+        flex-direction: column;
+        align-items   : center;
+    }
+
+    &-icon {
+        font-size: $card-icon-font-size;
+    }
+
+    &-text {
+        line-height: 2rem;
+        font-size  : $card-text-font-size;
+    }
+
+    &-text-sm {
+        font-weight: $font-bold;
+        color      : $card-text-sm-color;
+        font-size  : $card-text-font-size-sm;
+    }
+}
+
+.icons{
+    color: white;
+}

@@ -1,0 +1,32 @@
+// Header area style
+.topbar {
+    padding: $topbar-nav-padding-y $topbar-nav-padding-x;
+    background-color: $topbar-bg;
+
+    .navbar {
+        .icon-bell {
+            font-size: $badge-icon-size;
+        }
+
+        .badge-notification {
+            @include position(absolute, -6px,-2px);
+            width: $badge-size;
+            height: $badge-size;
+            border-radius: $rounded-circle;
+            background-color: $badge-bg;
+        }
+
+        .brand {
+            &-logo {
+                margin-left: 1rem;
+            }
+            &-img {
+                width: $brand-img-size;
+                height: $brand-img-size;
+                margin-right: 0.5rem;
+                border-radius: $rounded-circle;
+                background-color: $primary;
+            }
+        }
+    }
+}

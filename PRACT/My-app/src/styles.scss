@@ -1,0 +1,19 @@
+/* You can add global styles to this file, and also import other style files */
+// custom base scss
+@import '@angular/cdk/overlay-prebuilt.css';
+@import "../src/assets/scss/base/index";
+
+// bootstrap scss
+@import "../src/assets/scss/vendor/bootstrap-base";
+@import "../src/assets/scss/vendor/bootstrap-components";
+
+// components scss
+@import "../src/assets/scss/component/index";
+
+// layout scss
+@import "../src/assets/scss/layout/index";
+
+// utilities scss
+@import "../src/assets/scss/utilities/index";
+
+

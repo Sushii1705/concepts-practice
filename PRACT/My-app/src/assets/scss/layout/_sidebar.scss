@@ -1,0 +1,34 @@
+// Styles for Sidebar lies here
+
+// Primary Nav
+#primaryNav {
+    // never do this
+    flex            : 0 0 $sidebar-width;
+    max-width       : $sidebar-width;
+    background-color: $sidebar-bg;
+
+    .brand-title {
+        padding      : $header-nav-padding-y $header-nav-padding-x;
+        margin-bottom: $header-nav-margin-bottom;
+        font-size    : $brand-text-size;
+        text-align   : left;
+    }
+
+    .navbar-nav {
+        .nav-item {
+            padding      : $nav-item-padding-y $nav-item-padding-x;
+            margin-bottom: $nav-item-margin-bottom;
+            color        : $nav-text;
+            background   : transparent;
+            transition   : $transition-timing all;
+            cursor       : pointer;
+
+            &.active,
+            &:hover {
+                color      : $nav-active-text;
+                background : $nav-active-color;
+                font-weight: $font-bold;
+            }
+        }
+    }
+}

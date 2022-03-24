@@ -1,0 +1,20 @@
+.content {
+    &-wrapper {
+        padding         : 1.5rem;
+        background-color: $content-wrapper-bg;
+    }
+
+    &-title {
+        margin-bottom: $content-title-margin-bottom;
+        font-size    : $content-title-font-size;
+    }
+}
+
+.fighting-list-container {
+    background-color: #2d353b;
+    border-radius: $border-radius;
+
+    .fighting-list-header {
+        padding: 1rem 1.5rem;
+    }
+}

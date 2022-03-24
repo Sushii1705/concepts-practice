@@ -1,0 +1,49 @@
+{
+  "mentor": [
+    {
+      "firstname": "viral",
+      "lastname": "patel",
+      "email": "sushil@mail.com",
+      "password": "9898yyf",
+      "age": "13",
+      "city": "valsad",
+      "id": 1
+    },
+    {
+      "firstname": "tanmay",
+      "lastname": "patel",
+      "email": "patel@.com",
+      "password": "1233f",
+      "age": "12",
+      "city": "valsad",
+      "id": 2
+    },
+    {
+      "firstname": "nidhi",
+      "lastname": "hariakar",
+      "email": "patel@.com",
+      "password": "1233f",
+      "age": "12",
+      "city": "valsad",
+      "id": 3
+    },
+    {
+      "firstname": "sneha",
+      "lastname": "mistry",
+      "email": "patel@.com",
+      "password": "1233f",
+      "age": "12",
+      "city": "valsad",
+      "id": 4
+    },
+    {
+      "firstname": "sushil",
+      "lastname": "hariakar",
+      "email": "patel@.com",
+      "password": "1233f",
+      "age": "12",
+      "city": "valsad",
+      "id": 5
+    }
+  ]
+}
