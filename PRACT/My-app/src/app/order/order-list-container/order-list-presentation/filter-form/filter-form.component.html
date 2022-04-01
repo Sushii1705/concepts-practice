@@ -1,0 +1,128 @@
+<form [formGroup]="filterForm" class="shadow p-3 mt-4 bg-white">
+    <div class="mb-3">
+      <label for="exampleInputfirstname1" class="form-label">firstname</label>
+      <input
+        type="firstname"
+        class="form-control"
+        id="exampleInputfirstname1"
+        formControlName="firstname"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputlastname1" class="form-label">lastname</label>
+      <input
+        type="lastname"
+        class="form-control"
+        id="exampleInputlastname1"
+        formControlName="lastname"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Email address</label>
+      <input
+        type="email"
+        class="form-control"
+        id="exampleInputEmail1"
+        aria-describedby="emailHelp"
+        formControlName="email"
+      />
+      <div id="emailHelp" class="form-text">
+        We'll never share your email with anyone else.
+      </div>
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputModel" class="form-label">Catagory</label>
+      <div class="d-flex justify-content-between">
+        <div class="form-check">
+          <figure>
+            <label for="catagory1">
+
+              <img
+              src="../../../../assets/images/shirt-svgrepo-com.svg"
+              alt="shirt"
+              class="figure-img img-fluid img-thumbnail"
+              />
+            </label>
+          </figure>
+          <input
+            type="radio"
+            class="form-check-input"
+            name="catagory"
+            id="catagory1"
+            value="Men"
+            formControlName="catagory"
+          />
+          <label class="form-check-label" for="catagory1">Men</label>
+        </div>
+        <div class="form-check">
+          <figure>
+            <label for="catagory2">
+
+              <img
+                src="../../../../assets/images/sweater-svgrepo-com.svg"
+                alt="t-shirt"
+                class="figure-img img-fluid img-thumbnail"
+              /> 
+            </label>
+          </figure>
+  
+          <input
+            type="radio"
+            class="form-check-input"
+            name="catagory"
+            id="catagory2"
+            value="Women"
+            formControlName="catagory"
+          />
+          <label class="form-check-label" for="catagory2">Women</label>
+        </div>
+        <div class="form-check">
+          <figure>
+            <label for="catagory3">
+
+              <img
+              src="../../../../assets/images/hoodie-svgrepo-com.svg"
+              alt="hoodie"
+              class="figure-img img-fluid img-thumbnail"
+              />
+            </label>
+          </figure>
+  
+          <input
+            type="radio"
+            class="form-check-input"
+            name="catagory"
+            id="catagory3"
+            value="Kids"
+            formControlName="catagory"
+          />
+          <label class="form-check-label" for="catagory3">Kids</label>
+        </div>
+      </div>
+    </div>
+    <div class="mb-3 form-check">
+      <label class="form-check-label" for="exampleCheck1">Size</label>
+      <select
+        class="form-select"
+        aria-label="Default select example"
+        formControlName="size"
+      >
+        <option selected></option>
+        <option value="L">L</option>
+        <option value="2">xl</option>
+        <option value="3">xxl</option>
+      </select>
+    </div>
+    <div class="mb-3 form-check">
+      <input type="checkbox" class="form-check-input" id="exampleCheck1" />
+      <label class="form-check-label" for="exampleCheck1"
+        >Terms & conditions</label
+      >
+    </div>
+    <button type="submit" class="btn btn-primary text-white" (click)="applyFilter()">
+     submit
+    </button>
+    <button type="submit" class="btn btn-danger text-white ms-2" (click)="cancelFilter()">
+        cancel
+       </button>
+  </form>

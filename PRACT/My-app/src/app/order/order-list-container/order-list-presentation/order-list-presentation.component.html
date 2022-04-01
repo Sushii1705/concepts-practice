@@ -1,0 +1,48 @@
+<div class="pt-4" >
+    <button routerLink="../add" class="btn btn-primary mb-3 text-white">+Add</button>
+    <button class="btn btn-info mb-3 text-white ms-3" (click)="filterOverlay()">filter</button>
+    <table class="table table-hover shadow">
+      <thead>
+      
+        <tr>
+          
+          <th scope="col">#</th>
+          <th scope="col">firstname</th>
+          <th scope="col">lastname</th>
+          <th scope="col">email</th>
+          <th scope="col">Catagory</th>
+          <th scope="col">size</th>
+          <th scope="col " colspan="2">actions</th>
+        
+        </tr>
+      
+      </thead>
+      <tbody>
+        
+        <tr class="align-middle" *ngFor="let item of userList">
+          
+          <td>{{ item.id }}</td>
+          <td>{{ item.firstname }}</td>
+          <td>{{ item.lastname }}</td>
+          <td>{{ item.email }}</td>
+          <td>{{ item.catagory }}</td>
+          <td>{{ item.size }}</td>
+        
+          <td >
+               <button class="btn btn-info text-white" (click)="edit(item.id)">edit</button>
+               
+              </td>
+              <td>  
+              <button class="btn btn-danger text-white" (click)="onDelete(item.id)">
+                delete
+              </button>
+            </td>
+        </tr>
+      </tbody>
+    </table>
+    <app-pagination [items]="orderList" [itemsPerPage]="5" (changePage)="changePage($event)"></app-pagination>
+  </div>
+  <div>
+
+    <app-dragdrop></app-dragdrop>
+  </div>

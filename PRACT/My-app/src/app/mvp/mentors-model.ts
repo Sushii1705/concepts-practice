@@ -18,3 +18,9 @@ export class mentors{
 
     }
 }
+export interface filterdata{
+    name:string,
+    email:string,
+    age:number,
+    gender:string
+  }

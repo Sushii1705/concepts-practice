@@ -1,7 +1,8 @@
-import { ChangeDetectionStrategy, Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { ChangeDetectionStrategy, ChangeDetectorRef, Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { MentorsListPresenterService } from '../mentors-list-presenter/mentors-list-presenter.service';
 import { mentors } from '../../mentors-model';
 import { Router } from '@angular/router';
+import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
 
 
 
@@ -30,7 +31,7 @@ export class MentorsListPresentationComponent implements OnInit {
   
   @Output() public delete: EventEmitter<number>;
 
-  constructor( private mentorListPresentor:MentorsListPresenterService,private router:Router) {
+  constructor( private mentorListPresentor:MentorsListPresenterService,private router:Router,private cdr:ChangeDetectorRef) {
     this.delete = new EventEmitter();
    }
 
@@ -40,6 +41,10 @@ export class MentorsListPresentationComponent implements OnInit {
       alert('data deleted');
       this.router.navigateByUrl('mvp/list');
     });
+    this.mentorListPresentor.filterdata$.subscribe((res:mentors[])=>{
+      this._mentorList = res;
+      this.cdr.markForCheck();
+    })
   }
 
   onDelete(id: number) {
@@ -50,6 +55,13 @@ export class MentorsListPresentationComponent implements OnInit {
     this.router.navigateByUrl(`mvp/edit/${id}`);
   }
   displayoverlay(){
-    this.mentorListPresentor.displayoverlay();
+    this.mentorListPresentor.displayoverlay(this._mentorList);
   }
+
+  drop(event: CdkDragDrop<mentors[]>) {
+    console.log(event);
+    moveItemInArray( this._mentorList, event.previousIndex, event.currentIndex);
+  }
+ 
 }
+

@@ -11,6 +11,7 @@ import { MentorsListPresentationComponent } from './mentors-list-container/mento
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MentorsService } from './mentors.service';
 import { FilterPresentationComponent } from './mentors-list-container/mentors-list-presentation/filter-presentation/filter-presentation.component';
+import { DragDropModule } from '@angular/cdk/drag-drop';
 
 
 @NgModule({
@@ -28,7 +29,8 @@ import { FilterPresentationComponent } from './mentors-list-container/mentors-li
     FormsModule,
     ReactiveFormsModule,
     OverlayModule,
-    FormsModule
+    FormsModule,
+    DragDropModule
     
   ],
   providers:[MentorsService]

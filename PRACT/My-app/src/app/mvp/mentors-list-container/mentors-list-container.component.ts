@@ -1,3 +1,4 @@
+import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
 import { Component, Input, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { mentors } from '../mentors-model';
@@ -12,6 +13,7 @@ export class MentorsListContainerComponent implements OnInit {
 
   
 
+  public mentor:mentors[]=[];
 
   public mentorList$: Observable<mentors[]>;
   
@@ -30,4 +32,9 @@ export class MentorsListContainerComponent implements OnInit {
       this.mentorList$ = this.service.getdata();
     });
   }
+  drop(event: CdkDragDrop<mentors[]>) {
+    moveItemInArray(this.mentor, event.previousIndex, event.currentIndex);
+  }
+ 
+ 
 }

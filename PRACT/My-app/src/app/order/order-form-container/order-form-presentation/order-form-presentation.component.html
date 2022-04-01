@@ -1,0 +1,116 @@
+<form [formGroup]="orderForm" class="shadow p-3 mt-4">
+  <div class="mb-3">
+    <label for="exampleInputfirstname1" class="form-label">firstname</label>
+    <input
+      type="firstname"
+      class="form-control"
+      id="exampleInputfirstname1"
+      formControlName="firstname"
+    />
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputlastname1" class="form-label">lastname</label>
+    <input
+      type="lastname"
+      class="form-control"
+      id="exampleInputlastname1"
+      formControlName="lastname"
+    />
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Email address</label>
+    <input
+      type="email"
+      class="form-control"
+      id="exampleInputEmail1"
+      aria-describedby="emailHelp"
+      formControlName="email"
+    />
+    <div id="emailHelp" class="form-text">
+      We'll never share your email with anyone else.
+    </div>
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputModel" class="form-label">Catagory</label>
+    <div class="d-flex justify-content-between">
+      <div class="form-check">
+        <figure>
+          <img
+            src="../../../../assets/images/shirt-svgrepo-com.svg"
+            alt="shirt"
+            class="figure-img img-fluid img-thumbnail"
+          />
+        </figure>
+        <input
+          type="radio"
+          class="form-check-input"
+          name="catagory"
+          id="catagory1"
+          value="Men"
+          formControlName="catagory"
+        />
+        <label class="form-check-label" for="flexRadioMale1">Men</label>
+      </div>
+      <div class="form-check">
+        <figure>
+          <img
+            src="../../../../assets/images/sweater-svgrepo-com.svg"
+            alt="t-shirt"
+            class="figure-img img-fluid img-thumbnail"
+          />
+        </figure>
+
+        <input
+          type="radio"
+          class="form-check-input"
+          name="catagory"
+          id="catagory1"
+          value="Women"
+          formControlName="catagory"
+        />
+        <label class="form-check-label" for="flexRadioMale1">Women</label>
+      </div>
+      <div class="form-check">
+        <figure>
+          <img
+            src="../../../../assets/images/hoodie-svgrepo-com.svg"
+            alt="hoodie"
+            class="figure-img img-fluid img-thumbnail"
+          />
+        </figure>
+
+        <input
+          type="radio"
+          class="form-check-input"
+          name="catagory"
+          id="catagory1"
+          value="Kids"
+          formControlName="catagory"
+        />
+        <label class="form-check-label" for="flexRadioMale1">Kids</label>
+      </div>
+    </div>
+  </div>
+  <div class="mb-3 form-check">
+    <label class="form-check-label" for="exampleCheck1">Size</label>
+    <select
+      class="form-select"
+      aria-label="Default select example"
+      formControlName="size"
+    >
+      <option selected></option>
+      <option value="L">L</option>
+      <option value="Xl">Xl</option>
+      <option value="xxl">xxl</option>
+    </select>
+  </div>
+  <div class="mb-3 form-check">
+    <input type="checkbox" class="form-check-input" id="exampleCheck1" />
+    <label class="form-check-label" for="exampleCheck1"
+      >Terms & conditions</label
+    >
+  </div>
+  <button type="submit" class="btn btn-primary text-white" (click)="onSubmit()">
+    Purchase
+  </button>
+</form>
