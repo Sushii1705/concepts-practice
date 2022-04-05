@@ -7,6 +7,7 @@ import { PaginationComponent } from './pagination/pagination.component';
 import { DragdropComponent } from './dragdrop/dragdrop.component';
 import { DragUploadPresentationComponent } from './dragdrop/drag-upload-presentation/drag-upload-presentation.component';
 import { FileDragDirective } from './file-drag.directive';
+import { DragDroplistPresenteationComponent } from './dragdrop/drag-droplist-presenteation/drag-droplist-presenteation.component';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { FileDragDirective } from './file-drag.directive';
     PaginationComponent,
     DragdropComponent,
     DragUploadPresentationComponent,
-    FileDragDirective
+    FileDragDirective,
+    DragDroplistPresenteationComponent
   ],
   imports: [
     CommonModule,

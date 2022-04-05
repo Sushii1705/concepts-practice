@@ -58,6 +58,6 @@ export class OrderListPresentationComponent implements OnInit {
    //pagination
    changePage(userList:orders[]) {
     this.userList = userList;
-    this.cdr.markForCheck();
+    this.cdr.detectChanges();
 }
 }

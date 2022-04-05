@@ -21,5 +21,7 @@
 		</div>
 	</div> -->
     
-    <app-drag-upload-presentation></app-drag-upload-presentation>
+    <app-drag-upload-presentation (fileUpload)="saveFile($event)" ></app-drag-upload-presentation>
+	<app-drag-droplist-presenteation  [fileList]="fileList$ |async"
+	(delete)="delete($event)"></app-drag-droplist-presenteation>
     <!-- display uploaded files -->

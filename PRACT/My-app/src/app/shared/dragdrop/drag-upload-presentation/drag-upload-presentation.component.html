@@ -1,17 +1,16 @@
-<div class="dropzone d-flex align-items-center justify-content-center p-5" appFileDrag (filesChangeEmiter)="onFileChange($event)">
+<div class="dropzone d-flex align-items-center justify-content-center p-5" appFileDrag (filesChangeEmiter)="addFiles($event)">
     <div class="text-wrapper">
         <div class="centered">
-            <input type="file" name="file" id="file" class="d-none" (change)="onFileChange($event)" multiple />
+            <input type="file" name="file" id="file" class="d-none" (change)="addFiles($event.target)"/>
+            <button type="button" class="btn btn-warning text-white me-3" (click)="uploadFile()">Upload</button>
             <label for="file"><span class="bg-danger text-white p-2">Select your file</span> or Drop it
                 here!</label>
         </div>
-        <div class="row fileItem" *ngFor="let f of files; let ind = index">
-            <div class="col-sm-12 fileItemIconDiv" (click)="openConfirmDialog(ind)">
+        <!-- <div class="row fileItem">
+            <div class="col-sm-12 fileItemIconDiv" (click)="uploadFile()">
               <i class="fa-6x fileItemIcon"></i>
             </div>
-            <div class="col-sm-12 fileItemText">
-              <span>{{ f.name }}</span><span class="text-danger">remove</span>
-            </div>
-          </div>
+            
+          </div> -->
     </div>
 </div>

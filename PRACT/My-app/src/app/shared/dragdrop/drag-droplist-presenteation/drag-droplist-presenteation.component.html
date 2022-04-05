@@ -1,0 +1,38 @@
+<div class="mt-4">
+  <table class="table table-hover shadow">
+    <thead>
+      <tr class="align-middle">
+        <th scope="col">#</th>
+        <th scope="col">File Name</th>
+        <th scope="col">File Size</th>
+        <th scope="col">File Type</th>
+        <th  colspan="2" scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="align-middle" *ngFor="let file of fileList; let i = index">
+        <td>{{ i + 1 }}</td>
+        <td>{{ file.filename }}</td>
+        <td>{{ file.size }}</td>
+        <td>{{ file.type }}</td>
+        <td>
+          <button
+            class="btn btn-info text-white"
+            (click)="showFile(file.content, file.type)"
+          >
+            View
+          </button>
+          </td>
+          <td>
+          <button
+            class="btn btn-danger text-white "
+            (click)="onDelete(file.id)"
+          >
+            delete
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
