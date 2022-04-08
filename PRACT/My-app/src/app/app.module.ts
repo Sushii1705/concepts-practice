@@ -1,15 +1,12 @@
-import { OverlayModule } from '@angular/cdk/overlay';
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 // import {moveItemInArrayModule} from '@angular/cdk/drag-drop';
-import {CdkDragDrop} from '@angular/cdk/drag-drop';
-import { DragDropModule } from '@angular/cdk/drag-drop';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SidebarComponent } from './core/sidebar/sidebar.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { AuthGuard } from './mvp/auth/auth.guard';
 
 @NgModule({
   declarations: [
@@ -21,7 +18,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     AppRoutingModule,
     HttpClientModule,
   ],
-  providers: [],
+  providers: [AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

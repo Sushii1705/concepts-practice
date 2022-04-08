@@ -4,9 +4,6 @@ import { mentors } from '../../mentors-model';
 import { Router } from '@angular/router';
 import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
 
-
-
-
 @Component({
   selector: 'app-mentors-list-presentation',
   templateUrl: './mentors-list-presentation.component.html',
@@ -33,6 +30,8 @@ export class MentorsListPresentationComponent implements OnInit {
 
   constructor( private mentorListPresentor:MentorsListPresenterService,private router:Router,private cdr:ChangeDetectorRef) {
     this.delete = new EventEmitter();
+    console.log('Constructor called');
+    
    }
 
   ngOnInit(): void {
@@ -45,6 +44,8 @@ export class MentorsListPresentationComponent implements OnInit {
       this._mentorList = res;
       this.cdr.markForCheck();
     })
+    console.log('ngOnInit called');
+
   }
 
   onDelete(id: number) {
@@ -62,6 +63,31 @@ export class MentorsListPresentationComponent implements OnInit {
     console.log(event);
     moveItemInArray( this._mentorList, event.previousIndex, event.currentIndex);
   }
+
+  ngDoCheck(){
+    console.log('DoCheck called'); 
+  }
+
+  ngOnChanges(){
+    console.log('ngOnChanges called'); 
+  }
+
+  ngAfterContentChecked(){
+    console.log('ngAfterContentChecked called'); 
+  }
+
+  ngAfterContentInit(){
+    console.log('ngAfterContentInit called'); 
+  }
+  ngAfterViewInit(){
+    console.log('ngAfterViewInit called'); 
+  }
  
+  ngAfterViewChecked(){
+    console.log('ngAfterViewChecked called'); 
+  }
+  ngOnDestroy(){
+    console.log('ngOnDestroy called'); 
+  }
 }
 

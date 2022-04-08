@@ -35,6 +35,7 @@ export class DragDropPresenterService {
       const fileReader = new FileReader();
       fileReader.readAsDataURL(file)
       fileReader.onload = (event) =>{
+        console.log(event);
         this.fileData.content = event.target?.result as string;
         // console.log(this.fileData.content)
         this.fileRead.next(this.fileData);
