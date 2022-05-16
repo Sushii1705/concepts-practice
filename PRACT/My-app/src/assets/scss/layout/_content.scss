@@ -1,0 +1,18 @@
+// .container{
+//     padding: 1rem;
+// }
+.user-profile{
+   border-radius: $border-radius;
+    .profile-info{
+       padding: $profile-padding;
+       .user-image{
+          height: 100px;
+          width: 100px;
+          
+       }
+    }   
+    .profile-data {
+       padding: $profile-padding;
+    }   
+}
+   

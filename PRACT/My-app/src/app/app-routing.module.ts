@@ -4,7 +4,8 @@ import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [{ path: 'mvp', loadChildren: () => import('./mvp/mvp.module').then(m => m.MvpModule) },
  { path: 'order', loadChildren: () => import('./order/order.module').then(m => m.OrderModule)}, 
- { path: 'share', loadChildren: () => import('./shared/shared.module').then(m => m.SharedModule) }];
+ { path: 'share', loadChildren: () => import('./shared/shared.module').then(m => m.SharedModule) },
+ { path: 'profile', loadChildren: () => import('./view-profile/view-profile.module').then(m => m.ViewProfileModule) }];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

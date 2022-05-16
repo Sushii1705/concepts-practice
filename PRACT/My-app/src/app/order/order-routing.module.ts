@@ -12,6 +12,7 @@ children:[
     path: 'edit/:id',
     component: OrderFormContainerComponent
   },
+
   {path:'',redirectTo:'list',pathMatch:'full'}
 ]
 

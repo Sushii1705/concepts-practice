@@ -1,10 +1,15 @@
 // Theme Colors
-$primary: #0580dc;
+$primary: #145b69;
 $white: #ffffff;
 $success: #1eca1a;
 $danger: #e43536;
 $warning: #dc9909;
 $info: #8d63d3;
+$gray: #76969e;
+$dark : #313131;
+$light:#f9fafa;
+
+$theme-green: $primary;
 
 // Body
 // $body-color: #000000;
@@ -37,10 +42,23 @@ $table-header-bg: #354048;
 $table-cell-border-color:#29314a;
 $table-heading-color:#68707b;
 
-$text-colors: (
+$theme-colors: (
   "primary": $primary,
   "warning": $warning,
   "success": $success,
   "danger": $danger,
-  "info": $info
+  "info": $info,
+  "white": $white,
+  "gray":$gray,
+  "dark":$dark,
+  "light":$light
 );
+
+$theme-list: (
+  'default': $primary,
+  'green': $warning,
+  'blue': $success,
+  'dark-blue': $success,
+  'red': $success,
+  'orange': $success,
+)

@@ -12,6 +12,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MentorsService } from './mentors.service';
 import { FilterPresentationComponent } from './mentors-list-container/mentors-list-presentation/filter-presentation/filter-presentation.component';
 import { DragDropModule } from '@angular/cdk/drag-drop';
+import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 
 
 @NgModule({
@@ -30,7 +31,9 @@ import { DragDropModule } from '@angular/cdk/drag-drop';
     ReactiveFormsModule,
     OverlayModule,
     FormsModule,
-    DragDropModule
+    DragDropModule,
+    BsDatepickerModule
+    
     
   ],
   providers:[MentorsService]

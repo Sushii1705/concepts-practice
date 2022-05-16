@@ -28,10 +28,16 @@ export class MentorsListPresentationComponent implements OnInit {
   
   @Output() public delete: EventEmitter<number>;
 
+  // datepicker
+  bsValue = new Date();
+  bsRangeValue: Date[];
+  maxDate = new Date();
+
   constructor( private mentorListPresentor:MentorsListPresenterService,private router:Router,private cdr:ChangeDetectorRef) {
     this.delete = new EventEmitter();
     console.log('Constructor called');
-    
+    this.maxDate.setDate(this.maxDate.getDate() + 7);
+    this.bsRangeValue = [this.bsValue, this.maxDate];    
    }
 
   ngOnInit(): void {

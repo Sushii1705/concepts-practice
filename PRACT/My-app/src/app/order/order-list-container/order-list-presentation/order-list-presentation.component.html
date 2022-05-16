@@ -46,3 +46,14 @@
 
     <app-dragdrop></app-dragdrop>
   </div>
+
+  <div class="col-xs-12 col-12 col-sm-6 col-md-6 form-group mb-3">
+    <p><code>maxDate</code> is today</p>
+    <input class="form-control"
+           bsDatepicker
+           [minDate]="minDate"
+           [maxDate]="today"
+           (change)="isInvalidDate($event)"
+           [bsConfig]="{ dateInputFormat: 'DD-MM-YYYY',maxDateRange: 25  }">
+  </div>
+<app-bs-datepicker></app-bs-datepicker>

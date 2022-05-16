@@ -1,3 +1,4 @@
+import { formatDate } from '@angular/common';
 import { ChangeDetectorRef, Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Router } from '@angular/router';
 import { orders } from '../../order-model';
@@ -30,9 +31,25 @@ export class OrderListPresentationComponent implements OnInit {
   public userList:orders[];
   sortItems:any;
   @Output() public delete: EventEmitter<number>;
+
+  // minDate: Date;
+  // maxDate: Date;
+  today: Date;
+  maxDate: Date;
+  minDate: Date;
+  
+
   constructor(private listservice:OrderListPresenterService,private router:Router,private cdr: ChangeDetectorRef) { 
     this.delete = new EventEmitter();
     this.userList =[];
+    this.minDate = new Date();
+    this.maxDate = new Date();
+    // this.minDate.setDate(this.minDate.getDate() - 1);
+    this.maxDate.setDate(this.maxDate.getDate() + 7);
+    this.today = new Date();
+    // this.minDate = new Date(this.today.getFullYear(), this.today.getMonth());
+    this.minDate.setFullYear(this.minDate.getFullYear() - this.minDate.getFullYear() +1);
+    this.maxDate = new Date(this.today.getFullYear(), this.today.getMonth(), 25);
   }
 
   ngOnInit(): void {
@@ -45,6 +62,12 @@ export class OrderListPresentationComponent implements OnInit {
       this._orderList =res;
     })
   }
+  isInvalidDate( event: any ){
+    let test = event.target.value;
+    
+    if ( test == 'Invalid date' ){
+      event.target.value = ''; // Change it here
+    }}
   onDelete(id: number) {
     this.listservice.onDelete(id);
   }

@@ -9,7 +9,7 @@ $font-bold: 500;
 $transition-timing: 0.4s;
 
 // Border-radius
-// $border-radius: 12px;
+$border-radius: 12px;
 $rounded-circle: 50%;
 
 // Sidebar
@@ -45,3 +45,9 @@ $card-gap: 2rem;
 
 // Table
 $table-cell-padding: 0.5rem 2rem;
+
+// profile
+$profile-padding:4rem 5rem;
+
+// button
+$btn-border-radius:$border-radius;
