@@ -28,31 +28,31 @@
   <div class="profile-data row mx-0">
     <div class="col-10">
       <div class="row">
-        <div class="col-4">
+        <div class="col-4" *ngFor="let item of profileData">
           <h4 class="text-gray mb-5 fs-5">Email</h4>
           <h4 class="text-gray mb-5 fs-5">Gender</h4>
-          <h4 class="text-gray mb-5 fs-5">Mobile</h4>
+          <h4 class="text-gray mb-5 fs-5">Mobile No.</h4>
           <h4 class="text-gray mb-5 fs-5">Date of Establishment</h4>
-          <h4 class="text-gray mb-5 fs-5">Institue name</h4>
-          <h4 class="text-gray mb-5 fs-5">Address</h4>
+          <h4 class="text-gray mb-5 fs-5">Institute Name</h4>
+          <h4 class="text-gray mb-5 fs-5">Adddress</h4>
           <h4 class="text-gray mb-5 fs-5">State</h4>
           <h4 class="text-gray mb-5 fs-5">City</h4>
         </div>
-        <div class="col-8">
-          <h4 class="mb-5 fs-5">viratdubey@gmail.com</h4>
-          <h4 class="mb-5 fs-5">Male</h4>
-          <h4 class="mb-5 fs-5">9724677566</h4>
-          <h4 class="mb-5 fs-5">12 August 2021</h4>
-          <h4 class="mb-5 fs-5">Sunflower Hospital</h4>
-          <h4 class="mb-5 fs-5">zaveri bajar</h4>
-          <h4 class="mb-5 fs-5">Gujrat</h4>
-          <h4 class="mb-5 fs-5">Surat</h4>
+        <div class="col-8" *ngFor="let item of profileData">
+          <h4 class="mb-5 fs-5">{{item.email}}</h4>
+          <h4 class="mb-5 fs-5">{{item.gender}}</h4>
+          <h4 class="mb-5 fs-5">{{item.mobileNo}}</h4>
+          <h4 class="mb-5 fs-5">{{item.date}}</h4>
+          <h4 class="mb-5 fs-5">{{item.institueName}}</h4>
+          <h4 class="mb-5 fs-5">{{item.Address}}</h4>
+          <h4 class="mb-5 fs-5">{{item.state}}</h4>
+          <h4 class="mb-5 fs-5">{{item.city}}</h4>
         </div>
       </div>
     </div>
 
     <div class="col-2">
-      <h5 class="text-gray mb-2">Certificate Of Institue</h5>
+      <h5 class="text-gray mb-2">Certificate Of Institute</h5>
       <div class="px-4 py-2 rounded bg-gray">
 
         <a href="">haal ma nathi</a>

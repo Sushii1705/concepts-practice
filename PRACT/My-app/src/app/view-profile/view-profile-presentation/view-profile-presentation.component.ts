@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { profileData } from 'src/app/shared/models/model';
 
 @Component({
   selector: 'app-view-profile-presentation',
@@ -6,8 +7,23 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./view-profile-presentation.component.scss']
 })
 export class ViewProfilePresentationComponent implements OnInit {
+  private _profileData!:profileData[];
 
-  constructor() { }
+@Input() public set profileData(value : profileData[] | null){
+   
+  if(value) { 
+
+    if(!this._profileData){
+      this._profileData = value;
+    }
+    this._profileData = value;
+  }
+}
+public get profileData():profileData[] | null{
+  return this._profileData;
+}
+  constructor() { 
+  }
 
   ngOnInit(): void {
   }
