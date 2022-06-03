@@ -7,7 +7,7 @@ import { profileData } from '../shared/models/model';
 export class ViewprofileService {
 
   constructor(private http:HttpClient) { }
-  getdata():Observable<profileData[]>{
-    return this.http.get<profileData[]>(`http://localhost:3000/profileData`)
+  getUserData():Observable<profileData[]>{
+    return this.http.get<profileData[]>(`/doctor/{doctorMobileNumber}`)
   }
 }

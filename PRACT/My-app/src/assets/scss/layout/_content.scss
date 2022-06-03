@@ -6,8 +6,9 @@
     .profile-info{
        padding: $profile-padding;
        .user-image{
-          height: 100px;
-          width: 100px;
+          height: 150px;
+          width: 150px;
+          border:$profile-image-border;
           
        }
     }   
