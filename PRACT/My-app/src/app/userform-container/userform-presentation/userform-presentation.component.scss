@@ -1,0 +1,34 @@
+.progress-circle {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    border: 2px solid blue;
+
+    &::before {
+        border-color: red;
+    }
+
+}
+
+.progress-line {
+    position: relative;
+    transition: 0.5s all;
+
+    &::before {
+        transition: 0.4s all;
+        position: absolute;
+        content: '';
+        width: 0%;
+        height: 4px;
+        background-color: red;
+        top: 50%;
+        right: -12px;
+    }
+
+    &.progress-line {
+        &::before {
+            width: 93%;
+            transition: 0.5s all;
+        }
+    }
+}

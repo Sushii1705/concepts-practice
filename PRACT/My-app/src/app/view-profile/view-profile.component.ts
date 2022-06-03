@@ -16,7 +16,7 @@ public profiledata$: Observable<profileData[]>;
   }
 
   ngOnInit(): void {
-    this.profiledata$ = this.service.getdata();
+    this.profiledata$ = this.service.getUserData();
 
   }
 

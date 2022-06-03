@@ -1,0 +1,82 @@
+<!-- MultiStep Form :Start -->
+
+<div class="container h-100">
+    <div class="row">
+        <div class="col-4" [ngClass]="{'progress-line':isSecondForm}">
+            <div class="progress-circle d-flex align-items-center justify-content-center">
+                <span class="icon icon-timeline text-warning"></span>
+            </div>
+        </div>
+        <div class="col-4" [ngClass]="{'progress-line':isThirdForm}">
+            <div class="progress-circle d-flex align-items-center justify-content-center">
+                <span class="icon icon-timeline text-warning"></span>
+            </div>
+        </div>
+        <div class="col-4">
+            <div class="progress-circle d-flex align-items-center justify-content-center">
+                <span class="icon icon-timeline text-warning"></span>
+            </div>
+        </div>
+    </div>
+    <div *ngIf="isfirstForm && !isSecondForm && !isThirdForm">
+        <form class="shadow p-3 mt-4" [formGroup]="firstUserForm">
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Email address</label>
+                <input type="email" class="form-control w-50" formControlName="email" id="exampleInputEmail1"
+                    aria-describedby="emailHelp">
+                <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Password</label>
+                <input type="password" class="form-control w-50" formControlName="password" id="exampleInputPassword1">
+            </div>
+            <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" for="exampleCheck1">Check me out</label>
+            </div>
+            <button type="submit" class="btn btn-outline-warning me-3" (click)="onPrevious()">Previous</button>
+            <button type="submit" class="btn btn-primary" (click)="onNext()">Next</button>
+        </form>
+    </div>
+    <div *ngIf="isSecondForm && !isThirdForm">
+        <form class="shadow p-3 mt-4" [formGroup]="secondUserForm">
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Email address</label>
+                <input type="email" class="form-control w-50" formControlName="email" id="exampleInputEmail1"
+                    aria-describedby="emailHelp">
+                <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Password</label>
+                <input type="password" class="form-control w-50" formControlName="password" id="exampleInputPassword1">
+            </div>
+            <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" for="exampleCheck1">Check me out</label>
+            </div>
+            <button type="submit" class="btn btn-outline-warning me-3" (click)="onPrevious()">Previous</button>
+            <button type="submit" class="btn btn-primary" (click)="onNext()">Next</button>
+        </form>
+    </div>
+    <div *ngIf="isThirdForm">
+        <form class="shadow p-3 mt-4" [formGroup]="thirdUserForm">
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Email address</label>
+                <input type="email" class="form-control" formControlName="email" id="exampleInputEmail1"
+                    aria-describedby="emailHelp">
+                <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Password</label>
+                <input type="password" class="form-control" formControlName="password" id="exampleInputPassword1">
+            </div>
+            <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" for="exampleCheck1">Check me out</label>
+            </div>
+            <button type="submit" class="btn btn-outline-warning me-3" (click)="onPrevious()">Previous</button>
+            <button type="submit" class="btn btn-primary" (click)="onNext()">Next</button>
+        </form>
+    </div>
+</div>
+<!-- MultiStep Form :End -->
